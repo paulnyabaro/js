@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="this"></div>
     <script>
         const person = {
             firstName: "John",
@@ -15,7 +16,10 @@
               return this.firstName + " " + this.lastName;
             }
           };
-        console.log(person.fullName())
+        console.log(person.fullName());
+        
+
+        document.querySelector('.this').innerHTML = person.fullName();
     </script>
 </body>
 </html>

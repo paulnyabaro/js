@@ -3,7 +3,7 @@ function validate(){
     let form = document.getElementById('form');
     let eVEmail = document.getElementById('eVEmail').value;
     let emailVT = document.getElementById('emailVT');
-    let pattern = /^[^ ] + @[^ ]+\.[a-z]{2,3}$/;
+    let pattern = /^[^ ]+ @[^ ]+\.[a-z]{2,3}$/;
 
     if (eVEmail.match(pattern)){
         form.classList.add('valid');

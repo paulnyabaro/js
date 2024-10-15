@@ -5,13 +5,22 @@
 }
 body{
     width: 100%;
+    padding: 1.5rem;
+    background-color: #f7f7f7;
 }
 form{
-    background-color: red;
+    background-color: white;
     padding: 2rem;
     width: 100%;
+    box-shadow: 0 0 10px #0001;
+    border-radius: 0.5rem;
 }
 input{
     width: 100%;
     padding: 0.5rem 0.75rem;
+    border: 1px solid #0002;
+    font-size: 1rem;
+    line-height: 1.7;
+    border-radius: 0.5rem;
+    outline: none;
 }

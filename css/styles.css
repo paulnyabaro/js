@@ -7,6 +7,7 @@ body{
     width: 100%;
     padding: 1.5rem;
     background-color: #f7f7f7;
+    font-family: sans-serif;
 }
 form{
     background-color: white;
@@ -23,4 +24,9 @@ input{
     line-height: 1.7;
     border-radius: 0.5rem;
     outline: none;
+}
+#emailVT{
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 0.8;
 }

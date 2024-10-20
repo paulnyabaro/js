@@ -24,6 +24,7 @@
             width: 50px;
             height: 50px;
             background-color: #94fe08;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -44,7 +45,7 @@
                 let y = (div.offsetTop) - e.pageY;
                 let dist = Math.sqrt(x * x + y * y);
                 let score = Math.exp(dist * -0.01);
-                div.style.transform = "scale(" + score*1 +")"
+                div.style.transform = "scale(" + score*6 +")"
             });
         });
     </script>

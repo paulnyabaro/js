@@ -38,6 +38,15 @@
             let div = document.createElement('div');
             section.appendChild(div);
         }
+        document.addEventListener("mousemove", function(e){
+            document.querySelectorAll('div').forEach(div => {
+                let x = (div.offsetLeft) - e.pageX;
+                let y = (div.offsetTop) - e.pageY;
+                let dist = Math.sqrt(x * x + y * x);
+                let score = Math.exp(dist * -0.01);
+                div.style.transform = "scale(" + score*1 +")"
+            });
+        });
     </script>
 </body>
 </html>

@@ -24,7 +24,7 @@
         .card{
             background-color: black;
             padding: 1.5rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             height: 200px;
             width: 100px;
             position: relative;
@@ -32,13 +32,19 @@
         }
         .card::before{
             content: '';
-            height: 2rem;
-            width: 2rem;
+            height: 0;
+            width: 0;
+            transform: translate(-50%, -50%);
             background-color: chartreuse;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: var(--x);
+            top: var(--y);
             border-radius: 50%;
+            transition: 0.5s, top 0s, left 0s;
+        }
+        .card:hover::before{
+            height: 1100px;
+            width: 1100px;
         }
     </style>
 </head>
@@ -54,5 +60,18 @@
             </div>
         </div>
     </section>
+
+    <script>
+        let card = document.querySelectorAll('.card');
+        card.forEach(card => {
+            card.onmousemove = function(e){
+                let x = e.pageX - card.offsetLeft;
+                let y = e.pageY - card.offsetTop;
+
+                card.style.setProperty('--x', x+'px');
+                card.style.setProperty('--y', y+'px');
+            }
+        })
+    </script>
 </body>
 </html>

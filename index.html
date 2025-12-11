@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
+    <div class="this"></div>
 
+
+
+    <hr>
     <h2>Use Freeze to create an immutable object</h2>
     const fruit = Object.freeze({
       name: 'Orange'
     });
-</head>
-<body>
-    <div class="this"></div>
+    <p>* It only freezes immediate children</p>
+    <h3>use deepFreeze() to freeze all properties</h3>
+    const fruit = Object.deepFreeze({
+      name: 'Orange'
+    });
+
+    <h2>Arrow functions</h2>
+    const  sum = (x, y) => x + y;
+
     <script>
         const person = {
             firstName: "John",
@@ -62,6 +74,11 @@
 
       vegetable.name = 'Zucchini';
       console.log(vegetable.name)
+
+      // Arrow function
+      const product = (x, y) => x * y;
+
+      console.log(product(50, 29));
     </script>
 </body>
 </html>

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <h2>Use Freeze to create an immutable object</h2>
+    const fruit = Object.freeze({
+      name: 'Orange'
+    });
 </head>
 <body>
     <div class="this"></div>
@@ -48,6 +53,15 @@
       };
       console.log(book)
       console.log(book.title)
+      console.log(book['title'])
+
+      const vegetable = Object.freeze({
+        name: 'Brocoli'
+      });
+      console.log(vegetable.name);
+
+      vegetable.name = 'Zucchini';
+      console.log(vegetable.name)
     </script>
 </body>
 </html>

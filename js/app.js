@@ -19,3 +19,4 @@ function validate(){
     console.log(eVEmail)
 }
 // End of Email validation
+

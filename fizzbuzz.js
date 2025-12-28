@@ -1,4 +1,4 @@
-for(i=1;i<=100;i++){
+for(i=1; i<=100; i++){
     if(i%3 == 0){
         if(i%5 == 0){
             console.log("FizzBuzz");
@@ -12,5 +12,14 @@ for(i=1;i<=100;i++){
     }
     else{
         console.log(i);
+    }
+}
+
+for(j=0; j<8; j++){
+    if(j%2 == 0){
+        console.log(" # # # #");
+    }
+    else{
+        console.log("# # # # ");
     }
 }
